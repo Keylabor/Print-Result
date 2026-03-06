@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Mid-Term Project</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="GroupMembers.html" class="nav-title">Group Members</a>
+    </nav>
+    <section>
+        <div class = "container">
+            <div class = "main">
+                <div class = "heading">
+                    <h1>VINLAND CAFE☕</h1>
+                </div>
+                <div class = "body">
+                    <div class="ref-container">
+						<div class = "ref">
+							<label for="ref">Ref #</label>
+						</div>
+						<input type="text" name="ref" id="ref" placeholder="Enter Reference Number">
+                    </div>
+
+                    <div class = "coffee-type">
+                        <div>
+                            <label for="coffee">Select Coffee:</label>
+                        </div>
+                        <select name="coffee" id="coffee">
+                            <option value="none" selected>None</option>
+                            <option value="americano">Americano</option>
+                            <option value="latte">Latte</option>
+                            <option value="matcha">Matcha</option>
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="espresso">Espresso</option>
+                            <option value="chocolate">Chocolate</option>
+                        </select>
+                    </div>
+
+                    <div class = "coffee-size">
+                        <div>
+                            <label for="size">Select Size:</label>
+                        </div>
+                        <input type="radio" id = "small" value = "small" name = "size">
+                        <label for="small">Small</label>
+                        <input type="radio" id = "medium" value = "medium" name = "size">
+                        <label for="medium">Medium</label>
+                        <input type="radio" id = "large" value = "large" name = "size">
+                        <label for="large">Large</label>
+                    </div>
+
+                    <div class = "Price">
+                        <p id = "price"></p>
+                    </div>
+
+                    <div class = "discount">
+                        <div>
+                            <label for="discount">Discount:</label>
+                        </div>
+                        <input type="text" id="discount" name="discount" placeholder="Enter discount rate">
+                    </div>
+
+                    <div class = "coffee-quantity">
+                        <div>
+                            <label for="quantity">Quantity:</label>
+                        </div>
+                        <input type="number" min = "0" id="quantity" name="quantity" placeholder="0">
+                    </div>
+
+                    <div class = "total-cost">
+                        <p id = "total"></p>
+                    </div>
+
+					<div class = "order-btn">
+                        <button id = "order-btn">Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<div class="receipt" id="receipt" style="display:none;">
+    	<h2>VINLAND CAFE</h2>
+
+    	<p>Ref # <span id="receipt-ref"></span></p>
+    	<p>Coffee <span id="receipt-coffee"></span></p>
+    	<p>Size <span id="receipt-size"></span></p>
+    	<p>Quantity <span id="receipt-quantity"></span></p>
+    	<p>Discount <span id="receipt-discount"></span></p>
+
+    	<hr>
+
+    	<p>Total <span id="receipt-total"></span></p>
+
+    	<button id="print-btn">Print Receipt</button>
+	</div>
+    <script src = "JS/m-script.js"></script>
+</body>
+</html>
